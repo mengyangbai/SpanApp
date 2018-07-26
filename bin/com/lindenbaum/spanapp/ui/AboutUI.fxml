@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="257.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lindenbaum.spanapp.ui.AboutUIController">
+   <children>
+      <Label alignment="CENTER" layoutX="122.0" layoutY="32.0" text="SpanApp 1.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="24.0" layoutY="88.0" text="SpanApp is a structural analysis software">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="100.0" layoutY="119.0" text="for multiple span beams">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="120.0" layoutY="150.0" text="\@2015lindenbaum pty ltd">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="124.0" layoutY="175.0" text="http://www.lindenbaum.com.au" />
+      <Button layoutX="175.0" layoutY="206.0" mnemonicParsing="false" onAction="#handleLicense" text="License">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="52.0" layoutY="206.0" mnemonicParsing="false" onAction="#handleCredit" text="Credits">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="301.0" layoutY="206.0" mnemonicParsing="false" onAction="#handleClose" text="Close">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

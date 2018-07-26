@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lindenbaum.spanapp.ui.SummaryViewController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <tabs>
+            <Tab text="Node Results">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="NodeResult" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                          <columns>
+                            <TableColumn fx:id="NodeNo" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" sortable="false" text="Node No." />
+                            <TableColumn fx:id="Deflection" maxWidth="134.0" minWidth="100.0" prefWidth="134.0" sortable="false" text="Deflection" />
+                              <TableColumn fx:id="Reaction" maxWidth="146.0" minWidth="66.0" prefWidth="146.0" sortable="false" text="Reaction" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Span End Results">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="SpanEndResult" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                          <columns>
+                            <TableColumn fx:id="SpanNo" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" sortable="false" text="Span No." />
+                            <TableColumn fx:id="Shear" maxWidth="137.0" minWidth="100.0" prefWidth="137.0" sortable="false" text="Shear" />
+                              <TableColumn fx:id="Moments" maxWidth="164.0" minWidth="63.0" prefWidth="164.0" sortable="false" text="Moments" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Span Results">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="SpanResult" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                          <columns>
+                            <TableColumn fx:id="DistanceFromLeft" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" sortable="false" text="Distance from left" />
+                            <TableColumn fx:id="Deflection3" maxWidth="146.0" minWidth="100.0" prefWidth="146.0" sortable="false" text="Deflection" />
+                              <TableColumn fx:id="Shear3" maxWidth="186.0" minWidth="100.0" prefWidth="140.0" sortable="false" text="Shear" />
+                              <TableColumn fx:id="Moments3" maxWidth="213.0" minWidth="100.0" prefWidth="156.0" sortable="false" text="Moments" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Span Summary">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="SpanSummary" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                          <columns>
+                            <TableColumn fx:id="SpanNo4" maxWidth="90.0" minWidth="52.0" prefWidth="69.0" sortable="false" text="Span No." />
+                            <TableColumn fx:id="Deflection4" maxWidth="147.0" minWidth="100.0" prefWidth="147.0" sortable="false" text="Max. deflection" />
+                              <TableColumn fx:id="Shearrange" maxWidth="151.0" minWidth="74.0" prefWidth="151.0" sortable="false" text="Shear Range" />
+                              <TableColumn fx:id="Momentsrange" maxWidth="124.0" minWidth="23.0" prefWidth="124.0" sortable="false" text="Moment Range" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

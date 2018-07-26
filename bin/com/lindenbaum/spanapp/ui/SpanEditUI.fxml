@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lindenbaum.spanapp.ui.SpanEditUIController">
+   <children>
+      <Label layoutX="35.0" layoutY="32.0" text="Span No:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="SpanNumberLabel" layoutX="149.0" layoutY="27.0" prefHeight="34.0" prefWidth="138.0" text="Label" />
+      <Label layoutX="106.0" layoutY="87.0" text="Length (m) :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="142.0" text="Moment of Inertia (m^4) :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lengthField" layoutX="195.0" layoutY="84.0" />
+      <TextField fx:id="InertiaField" layoutX="195.0" layoutY="140.0" />
+      <HBox alignment="CENTER" layoutX="131.0" layoutY="192.0" prefHeight="51.0" prefWidth="138.0" spacing="20.0">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleOk" text="   OK    " />
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

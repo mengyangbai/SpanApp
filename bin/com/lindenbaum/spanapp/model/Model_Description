@@ -1,0 +1,26 @@
+此文件描述SpanModel和ModelSolver的关系，以及建模过程
+
+SpanModel存放一个Span（梁模型）的数据，是JavaFX Bean模型，所有数组
+都继承于javafx.beans.property.Property类，成员变量如下
+
+输入变量：
+1. DoubleProperty[][] material：6列表格， 对应Material表
+2. DoubleProperty[][] nodes: 3列表格， 对应Nodes表
+3. IntegerProperty[][] beams: 4列表格， 对应Beam Connection表
+4. StringProperty[][] nodeRestrain: 4列表格，String类型，对应Node Restrain表
+									"B"表示"空"；"F"表示"Fix"；第一列为转换成String的数字
+5. DoubleProperty[][] load: 10列表格，对应整个Load表
+							之后会拆成3个表格对应distLoads(前6列)；pointLoads（之后2列）；moments（最后2列）
+
+输出变量
+1. DoubleProperty[][] nodeResults: 2列表格
+2. DoubleProperty[][] beamEndResults: 3列表格
+3. DoubleProperty[][] allBeamResutls: 7列表格
+
+建模过程如下：
+1. 通过GUI，会建立一个SpanModel的模型并且给上述输入变量赋值（和GUI绑定）；
+2. 调用SpanModel.calculate()方法：
+   a. 构造一个ModelSolver对象:solver；
+   b. 通过调用ModelSolver.initialise()方法（我已重写），把输入变量转换为相应类型赋给solver；
+   c. 调用ModelSolver.formKg()方法，计算ModelSolver中的nodeResult, beamEndResult, beamResults;
+   d. 调用ModelSolver.writeResult()方法，将计算好的结果再赋给SpanModel
